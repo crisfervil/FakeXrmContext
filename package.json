@@ -1,0 +1,27 @@
+{
+  "name": "fakexrmcontext",
+  "version": "1.0.0",
+  "description": "Faxe Xrm Context for Javascript Unit Tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisfervil/FakeXrmContext.git"
+  },
+  "keywords": [
+    "Xrm",
+    "Javascript",
+    "Dynamics"
+  ],
+  "author": "crisfervil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crisfervil/FakeXrmContext/issues"
+  },
+  "homepage": "https://github.com/crisfervil/FakeXrmContext#readme",
+  "devDependencies": {
+    "typescript": "^2.6.1"
+  }
+}

@@ -4,7 +4,7 @@ export class Collection<T> {
 		private itemsNames:{[name: string]: number}={};
 	
 		get(item?:number|string):T|Array<T> {
-			var retVal:T|Array<T>=null;
+			var retVal:T|Array<T>;
 	
 			if(item===undefined){
 				retVal = this.items;

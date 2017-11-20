@@ -2,8 +2,8 @@ import {AttributeCollection} from './AttributeCollection';
 import {UISectionCollection} from './UISectionCollection';
 
 export class UITab{
-    private attributes: AttributeCollection = null;
-    public sections: UISectionCollection = null;
+    private attributes: AttributeCollection;
+    public sections: UISectionCollection;
 
     constructor(attributes:AttributeCollection){
         this.attributes = attributes;

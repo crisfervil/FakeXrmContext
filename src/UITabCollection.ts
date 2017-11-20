@@ -4,7 +4,7 @@ import {AttributeCollection} from './AttributeCollection';
 
 export class UITabCollection extends Collection<UITab>{
 	
-		private attributes: AttributeCollection = null;
+		private attributes: AttributeCollection;
 	
 		constructor(attributes:AttributeCollection){
 			super();

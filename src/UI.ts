@@ -8,8 +8,8 @@ import {UIControl} from './UIControl';
 
 export class UI {
 	
-		public tabs : UITabCollection = null;
-		private attributes: AttributeCollection = null;
+		public tabs : UITabCollection;
+		private attributes: AttributeCollection;
 	
 		constructor(attributes:AttributeCollection){    
 			this.attributes = attributes;

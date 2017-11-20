@@ -1,8 +1,8 @@
 import {AttributeCollection} from './AttributeCollection';
 
 export class CRMEntity {
-    public attributes:AttributeCollection = null;
-    public id:string = null;
+    public attributes:AttributeCollection;
+    public id:string;
     public entityName:string = '';
 
     constructor(attributes:AttributeCollection){

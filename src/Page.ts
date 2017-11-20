@@ -3,14 +3,14 @@ import {CRMData} from './CRMData';
 import {CRMContext} from './CRMContext';
 import {UI} from './UI';
 import {AttributeValue} from './AttributeValue';
-
+import { OptionsetOption } from './OptionsetOption';
 
 export class Page{
 	
-		public attributes:AttributeCollection = null;
-		public ui : UI = null;
-		public data : CRMData = null;
-		public context : CRMContext = null;
+		public attributes:AttributeCollection;
+		public ui : UI;
+		public data : CRMData;
+		public context : CRMContext;
 	
 		constructor(){
 			this.attributes = new AttributeCollection();

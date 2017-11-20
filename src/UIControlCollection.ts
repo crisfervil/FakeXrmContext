@@ -6,7 +6,7 @@ import {AttributeValue} from './AttributeValue';
 
 export class UIControlCollection extends Collection<UIControl>{
 	
-		private attributes:AttributeCollection=null;
+		private attributes:AttributeCollection;
 	
 		constructor(attributes:AttributeCollection){
 			super();

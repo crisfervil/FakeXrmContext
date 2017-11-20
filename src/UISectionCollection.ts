@@ -5,7 +5,7 @@ import {UISection} from './UISection';
 
 export class UISectionCollection extends Collection<UISection>{
 	
-		private attributes: AttributeCollection = null;
+		private attributes: AttributeCollection;
 		constructor(attributes:AttributeCollection){
 			super();
 			this.attributes = attributes;

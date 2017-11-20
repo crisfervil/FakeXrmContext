@@ -4,8 +4,8 @@ import {AttributeCollection} from './AttributeCollection';
 
 export class CRMData {
 	
-	public entity : CRMEntity = null;
-	public context : CRMContext = null;
+	public entity : CRMEntity;
+	public context : CRMContext;
 
 	constructor(attributes:AttributeCollection){
 		this.entity=new CRMEntity(attributes);

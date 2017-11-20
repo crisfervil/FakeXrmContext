@@ -2,8 +2,8 @@ import {AttributeCollection} from './AttributeCollection';
 import {UIControlCollection} from './UIControlCollection';
 
 export class UISection{
-    private attributes:AttributeCollection=null;
-    public controls:UIControlCollection=null;
+    private attributes:AttributeCollection;
+    public controls:UIControlCollection;
 
     constructor(attributes:AttributeCollection, public name?:string){
         this.attributes = attributes; 

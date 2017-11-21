@@ -1,8 +1,3 @@
-import {FakeXrmContext} from "../src/FakeXrmContext";
-import {TestedCode} from "./TestedCode";
-import {AttributeValue} from "../src/AttributeValue";
-import {Xrm} from "../src/Xrm";
-
 describe("test1", ()=>{
 	it("exp1", ()=>{
 

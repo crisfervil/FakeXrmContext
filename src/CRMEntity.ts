@@ -1,6 +1,4 @@
-import {AttributeCollection} from './AttributeCollection';
-
-export class CRMEntity {
+class CRMEntity {
     public attributes:AttributeCollection;
     public id:string;
     public entityName:string = '';

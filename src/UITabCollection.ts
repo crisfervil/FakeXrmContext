@@ -1,8 +1,4 @@
-import {Collection} from './Collection';
-import {UITab} from './UITab';
-import {AttributeCollection} from './AttributeCollection';
-
-export class UITabCollection extends Collection<UITab>{
+class UITabCollection extends Collection<UITab>{
 	
 		private attributes: AttributeCollection;
 	

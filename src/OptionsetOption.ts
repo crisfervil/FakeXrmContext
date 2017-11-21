@@ -1,4 +1,4 @@
-export class OptionsetOption{
-    public text:string;
-    public value:number;
+class OptionsetOption {
+	public text: string;
+	public value: number;
 }

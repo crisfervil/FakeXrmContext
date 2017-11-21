@@ -1,4 +1,4 @@
-export class Collection<T> {
+class Collection<T> {
 	
 		private items:T[] = new Array<T>();
 		private itemsNames:{[name: string]: number}={};

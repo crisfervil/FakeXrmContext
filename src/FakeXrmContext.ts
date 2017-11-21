@@ -1,7 +1,4 @@
-import {Page} from './Page';
-import {CRMUtility} from './CRMUtility';
-
-export class FakeXrmContext {
+class FakeXrmContext {
     public Page = new Page();
     public Utility = new CRMUtility();
 

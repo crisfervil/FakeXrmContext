@@ -1,8 +1,4 @@
-import {CRMEntity} from './CRMEntity';
-import {CRMContext} from './CRMContext';
-import {AttributeCollection} from './AttributeCollection';
-
-export class CRMData {
+class CRMData {
 	
 	public entity : CRMEntity;
 	public context : CRMContext;

@@ -1,6 +1,4 @@
-import { OptionsetOption } from "./OptionsetOption";
-
-export class AttributeValue {
+class AttributeValue {
 	
 		constructor(public name:string,public value?:any,public text?:string,public options?:OptionsetOption[]){
 		}

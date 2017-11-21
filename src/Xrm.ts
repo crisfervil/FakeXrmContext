@@ -1,3 +1,1 @@
-import { FakeXrmContext } from "./FakeXrmContext";
-
-export var Xrm = new FakeXrmContext();
+var Xrm = new FakeXrmContext();

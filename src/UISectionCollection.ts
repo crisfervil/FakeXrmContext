@@ -1,9 +1,4 @@
-import {AttributeCollection} from './AttributeCollection';
-import {Collection} from './Collection';
-import {UISection} from './UISection';
-
-
-export class UISectionCollection extends Collection<UISection>{
+class UISectionCollection extends Collection<UISection>{
 	
 		private attributes: AttributeCollection;
 		constructor(attributes:AttributeCollection){

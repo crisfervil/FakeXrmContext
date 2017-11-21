@@ -1,5 +1,5 @@
 // https://msdn.microsoft.com/en-us/library/gg327828.aspx#BKMK_getFormType
-export enum FormTypes{
+enum FormTypes{
     Undefined=0,
     Create=1,
     Update=2,

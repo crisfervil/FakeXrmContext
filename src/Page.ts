@@ -17,7 +17,7 @@ class Page {
 	}
 
 	setAttribute(attributeName: string, value?: any, text?: string, options?: OptionsetOption[]) {
-		var attr = this.attributes.set(attributeName, new AttributeValue(attributeName, value, text, options));
+		this.attributes.set(attributeName, new AttributeValue(attributeName, value, text, options));
 	}
 
 	getControl(attributeName: string) {

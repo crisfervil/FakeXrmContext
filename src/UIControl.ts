@@ -2,6 +2,7 @@ class UIControl {
 
 	public visible: boolean = true;
 	public label: string = '';
+	public disabled: boolean = false;
 
 	constructor(public attribute: AttributeValue) {
 
@@ -25,5 +26,9 @@ class UIControl {
 
 	setVisible(visible: boolean) {
 		this.visible = visible;
+	}
+
+	setDisabled(disabled: boolean) {
+		this.disabled = disabled;
 	}
 }

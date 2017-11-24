@@ -289,3 +289,5 @@ __pycache__/
  
 # Ignore all javascript files
 *.js
+*.js.map
+*.d.ts

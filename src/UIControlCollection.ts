@@ -14,7 +14,7 @@ class UIControlCollection extends Collection<UIControl>{
 		var attr = <AttributeValue>this.attributes.get(attributeName);
 		if (attr === null) throw new Error('Attribute not found');
 
-		if (control == null) control = new UIControl(attr);
+		if (control === undefined) control = new UIControl(attr);
 
 		return super.set(attributeName, control);
 	}

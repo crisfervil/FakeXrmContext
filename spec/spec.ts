@@ -1,13 +1,32 @@
-describe("test1", ()=>{
-	it("exp1", ()=>{
+/// <reference path="../dist/FakeXrmContext.d.ts" />
+/// <reference path="./Account_Mainform.ts" />
 
-		Xrm.Page.setAttribute("name","test");
+describe("Account MainForm", ()=>{
+	describe("UpdateNameAttribue", ()=>{
+		it("Updates the name correctly", ()=>{
 
-		var testedCode = new TestedCode();
+			Xrm.Page.setAttribute("name","test");
 
-		// this method contains the logig to be tested
-		testedCode.GetAndSetFormAttributes();
+			var accountForm = new Account_MainForm();
+			// call the function to be tested
+			accountForm.UpdateNameAttribute();
 
-		expect((<AttributeValue>Xrm.Page.getAttribute("name")).getValue()).toBe("updated");
+			// check the status of the form
+			expect((<AttributeValue>Xrm.Page.getAttribute("name")).getValue()).toBe("updated");
+
+		});
+
+		it("Doesn't updates when not required", ()=>{
+			
+			Xrm.Page.setAttribute("name","any value");
+
+			var accountForm = new Account_MainForm();
+			// call the function to be tested
+			accountForm.UpdateNameAttribute();
+
+			// check the status of the form
+			expect((<AttributeValue>Xrm.Page.getAttribute("name")).getValue()).toBe("any value");
+
+		});		
 	});
 });

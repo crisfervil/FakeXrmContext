@@ -1,6 +1,6 @@
-class TestedCode {
+class Account_MainForm {
 
-	GetAndSetFormAttributes() {
+	UpdateNameAttribute() {
 
 		// get the attribute
 		var nameAttribute = <AttributeValue>Xrm.Page.getAttribute("name");
@@ -8,6 +8,5 @@ class TestedCode {
 		if (nameAttribute.getValue() == "test") {
 			nameAttribute.setValue("updated");
 		}
-
 	}
 }

@@ -1,13 +1,10 @@
 class UITabCollection extends Collection<UITab>{
 	
-		private attributes: AttributeCollection;
-	
-		constructor(attributes:AttributeCollection){
+		constructor(private _ui:UI){
 			super();
-			this.attributes = attributes;
 		}
 	
-		set (tabName:string, tab:UITab=new UITab(this.attributes)){
-			return super.set(tabName,tab);
+		add (tabName:string, tab:UITab=new UITab(this._ui)){
+			return super.add(tabName,tab);
 		}
 	}

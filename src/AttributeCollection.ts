@@ -1,8 +1,12 @@
 /// <reference path="Collection.ts" />
 class AttributeCollection extends Collection<AttributeValue>{
 
-	set (attributeName:string, attribute:AttributeValue=new AttributeValue(attributeName)){
-		return super.set(attributeName,attribute);
+	constructor(private _entity:CRMEntity){
+		super();
+	}
+
+	add (attributeName:string, attribute:AttributeValue=new AttributeValue(this._entity,attributeName)){
+		return super.add(attributeName,attribute);
 	}
 
 }

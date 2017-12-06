@@ -1,13 +1,13 @@
 class UISection {
-	private attributes: AttributeCollection;
-	public controls: UIControlCollection;
 
-	constructor(attributes: AttributeCollection, public name?: string) {
-		this.attributes = attributes;
-		this.controls = new UIControlCollection(this.attributes);
+	constructor(private tab:UITab, public name?: string) {
 	}
 
 	getName() {
 		return this.name;
+	}
+
+	get controls(){
+		return this.tab.ui.controls.get(x=>x.section==this);
 	}
 }

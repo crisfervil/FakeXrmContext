@@ -1,9 +1,11 @@
 class UITab{
-    private attributes: AttributeCollection;
     public sections: UISectionCollection;
 
-    constructor(attributes:AttributeCollection){
-        this.attributes = attributes;
-        this.sections = new UISectionCollection(attributes);
-    }    
+    constructor(private _ui:UI){
+        this.sections = new UISectionCollection(this);
+	}
+	
+	get ui(){
+		return this._ui;
+	}
 }

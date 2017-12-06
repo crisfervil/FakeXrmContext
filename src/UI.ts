@@ -2,35 +2,21 @@ class UI {
 
 	public tabs: UITabCollection;
 	private attributes: AttributeCollection;
-
-	constructor(attributes: AttributeCollection) {
-		this.attributes = attributes;
-		this.tabs = new UITabCollection(this.attributes);
+	private _controls:UIControlCollection;
+	
+	constructor(private _page:Page) {
+		this._controls = new UIControlCollection();
+		this.tabs = new UITabCollection(this);
 	}
 
 	// https://msdn.microsoft.com/en-us/library/gg327828.aspx#BKMK_getFormType
 	public formType: FormTypes = FormTypes.Undefined;
 
-	getFormType() {
+	getFormType() : FormTypes {
 		return this.formType;
 	}
 
 	get controls(): UIControlCollection {
-
-		var retVal = new UIControlCollection(this.attributes);
-
-		for (var i = 0; i < this.tabs.getLength(); i++) {
-			var tab = <UITab>this.tabs.get(i);
-			for (var j = 0; j < tab.sections.getLength(); j++) {
-				var section = <UISection>tab.sections.get(j);
-				var sectionControls: UIControl[] = <UIControl[]>section.controls.get();
-				for (var k = 0; k < sectionControls.length; k++) {
-					var control = sectionControls[k];
-					retVal.set(control.attribute.name, control);
-				}
-			}
-		}
-
-		return retVal;
+		return this._controls;
 	}
 }

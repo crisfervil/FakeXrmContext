@@ -1,14 +1,23 @@
 class CRMEntity {
-    public attributes:AttributeCollection;
-    public id:string;
+    private _attributes:AttributeCollection;
+
+	public id:string;
     public entityName:string = '';
 
-    constructor(attributes:AttributeCollection){
-        this.attributes = attributes;
+    constructor(private _data:CRMData) {
+		this._attributes = new AttributeCollection(this);
     }
 
+	get data(){
+		return this._data;
+	}
+
+	get attributes(){
+		return this._attributes;
+	}
+
     save(){
-        if(window.console) console.log('saved');
+        console.log('saved');
     }
 
     getId(){

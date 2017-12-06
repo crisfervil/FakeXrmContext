@@ -1,6 +1,6 @@
 class AttributeValue {
 	
-		constructor(public name:string,public value?:any,public text?:string,public options?:OptionsetOption[]){
+		constructor(private _entity:CRMEntity, public name:string, public value?:any, public text?:string, public options?:OptionsetOption[]){
 		}
 	
 		getName(){
@@ -21,6 +21,10 @@ class AttributeValue {
 	
 		getOptions(){
 			return this.options;
+		}
+
+		get controls(){
+			return this._entity.data.page.ui.controls.get(x=>x.attribute===this);
 		}
 	}
 	

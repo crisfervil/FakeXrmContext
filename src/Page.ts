@@ -1,26 +1,28 @@
 class Page {
 
-	public attributes: AttributeCollection;
-	public ui: UI;
-	public data: CRMData;
-	public context: CRMContext;
+	private _ui: UI;
+	private _data: CRMData;
+	private _context: CRMContext;
 
 	constructor() {
-		this.attributes = new AttributeCollection();
-		this.ui = new UI(this.attributes);
-		this.data = new CRMData(this.attributes);
-		this.context = new CRMContext();
+		this._ui = new UI(this);
+		this._data = new CRMData(this);
+		this._context = new CRMContext();
 	}
 
-	getAttribute(attributeName: string) {
-		return this.attributes.get(attributeName);
+	get context(){
+		return this._context;
 	}
 
-	setAttribute(attributeName: string, value?: any, text?: string, options?: OptionsetOption[]) {
-		this.attributes.set(attributeName, new AttributeValue(attributeName, value, text, options));
+	get data(){
+		return this._data;
+	}
+
+	get ui(){
+		return this._ui;
 	}
 
 	getControl(attributeName: string) {
-		return this.ui.controls.get(attributeName);
+		return this._ui.controls.get(attributeName);
 	}
 }

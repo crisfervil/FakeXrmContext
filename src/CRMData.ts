@@ -1,10 +1,16 @@
 class CRMData {
 	
-	public entity : CRMEntity;
-	public context : CRMContext;
+	public _entity : CRMEntity;
 
-	constructor(attributes:AttributeCollection){
-		this.entity=new CRMEntity(attributes);
-		this.context = new CRMContext();
+	constructor(private _page:Page){
+		this._entity=new CRMEntity(this);
 	}
+
+	get entity(){
+		return this._entity;
+	}
+	get page(){
+		return this._page;
+	}
+
 }

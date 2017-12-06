@@ -4,12 +4,19 @@ class UIControl {
 	public label: string = '';
 	public disabled: boolean = false;
 
-	constructor(public attribute: AttributeValue) {
+	constructor(public name: string, private _attribute:AttributeValue, private _section:UISection) {
+	}
 
+	get attribute(){
+		return this._attribute;
+	}
+
+	get section(){
+		return this._section;
 	}
 
 	getAttribute() {
-		return this.attribute;
+		return this.name;
 	}
 
 	getLabel(): string {

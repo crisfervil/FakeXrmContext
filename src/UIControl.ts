@@ -1,18 +1,20 @@
 class UIControl {
 
-	public visible: boolean = true;
-	public label: string = '';
-	public disabled: boolean = false;
+	// https://msdn.microsoft.com/en-us/library/gg334266.aspx
 
-	constructor(public name: string, private _attribute:AttributeValue, private _section:UISection) {
+	public _visible: boolean = true;
+	public _label: string = '';
+	public _disabled: boolean = false;
+
+	constructor(public name: string, private _attributeName:string, private _sectionName:string, private _ui:UI) {
 	}
 
 	get attribute(){
-		return this._attribute;
+		return this._attributeName;
 	}
 
 	get section(){
-		return this._section;
+		return this._sectionName;
 	}
 
 	getAttribute() {
@@ -20,22 +22,25 @@ class UIControl {
 	}
 
 	getLabel(): string {
-		return this.label;
+		return this._label;
 	}
 
 	setLabel(label: string) {
-		this.label = label;
+		this._label = label;
 	}
 
 	getVisible() {
-		return this.visible;
+		return this._visible;
 	}
 
 	setVisible(visible: boolean) {
-		this.visible = visible;
+		this._visible = visible;
 	}
 
+	getDisabled(){
+		return this._disabled;
+	}
 	setDisabled(disabled: boolean) {
-		this.disabled = disabled;
+		this._disabled = disabled;
 	}
 }

@@ -8,6 +8,6 @@ class UISection {
 	}
 
 	get controls(){
-		return this.tab.ui.controls.get(x=>x.section==this);
+		return this.tab.ui.controls.get(x=>x.section==this.name);
 	}
 }

@@ -24,7 +24,7 @@ class AttributeValue {
 		}
 
 		get controls(){
-			return this._entity.data.page.ui.controls.get(x=>x.attribute===this);
+			return this._entity.data.page.ui.controls.get(x=>x.attribute===this.name);
 		}
 	}
 	

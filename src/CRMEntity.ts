@@ -5,7 +5,7 @@ class CRMEntity {
     public entityName:string = '';
 
     constructor(private _data:CRMData) {
-		this._attributes = new AttributeCollection(this);
+		this._attributes = new AttributeCollection();
     }
 
 	get data(){

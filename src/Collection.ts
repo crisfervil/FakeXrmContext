@@ -10,8 +10,8 @@ class Collection<T> {
 	get(): Array<T>;
 	get(selector: CollectionSelector<T>): Array<T>;
 	get(item?: number | string): T;
-	get(item?: number | string | CollectionSelector<T>): T | Array<T> {
-		var retVal: T | Array<T>;
+	get(item?: number | string | CollectionSelector<T>): T | Array<T> | null {
+		var retVal: T | Array<T> | null = null;
 
 		if (item === undefined) {
 			retVal = this.items;
@@ -30,8 +30,9 @@ class Collection<T> {
 		}
 		else if (typeof item === 'string') {
 			var ndx = this.itemsNames[item];
-			if (ndx === undefined) throw new Error(`item '${item}' not found in collection`);
-			retVal = this.items[ndx];
+			if (ndx !== undefined){
+				retVal = this.items[ndx];
+			}
 		}
 		else {
 			throw Error('Not Implemented');

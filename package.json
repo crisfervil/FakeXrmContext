@@ -4,7 +4,7 @@
   "description": "Faxe Xrm Context for Javascript Unit Tests",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,8 @@
   "devDependencies": {
     "@types/jasmine": "^2.8.2",
     "karma": "^2.0.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
     "typescript": "^2.6.1",
     "typescript-bundle": "^0.8.7"
   },

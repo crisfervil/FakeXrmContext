@@ -1,0 +1,9 @@
+language: node_js
+
+before_script:
+  - tsc
+  - tsc -p tsconfig-tests.json
+ 
+install:
+  - npm install
+

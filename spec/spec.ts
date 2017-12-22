@@ -1,5 +1,5 @@
 /// <reference path="../dist/FakeXrmContext.d.ts" />
-/// <reference path="./Account_Mainform.ts" />
+/// <reference path="./Account_MainForm.ts" />
 
 describe("Account MainForm", () => {
 	describe("UpdateNameAttribue", () => {

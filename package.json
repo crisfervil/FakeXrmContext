@@ -23,8 +23,9 @@
   "homepage": "https://github.com/crisfervil/FakeXrmContext#readme",
   "devDependencies": {
     "@types/jasmine": "^2.8.2",
+    "karma": "^2.0.0",
     "typescript": "^2.6.1",
-	"typescript-bundle": "^0.8.7"
+    "typescript-bundle": "^0.8.7"
   },
   "dependencies": {
     "jasmine": "^2.8.0"
